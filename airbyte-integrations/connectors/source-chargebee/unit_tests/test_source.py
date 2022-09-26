@@ -109,6 +109,7 @@ def test_source_streams_v2(test_config_v2):
     assert len(streams) == 11
     actual_stream_names = {stream.name for stream in streams}
     expected_stream_names = {
+        "attached_item",
         "coupon",
         "credit_note",
         "customer",
@@ -118,7 +119,6 @@ def test_source_streams_v2(test_config_v2):
         "subscription",
         "item",
         "item_price",
-        "attached_item",
         "transaction",
     }
     assert expected_stream_names == actual_stream_names
